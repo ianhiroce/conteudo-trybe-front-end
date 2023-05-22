@@ -1,5 +1,6 @@
 // Importamos o Swal da biblioteca sweetalert2
 import Swal from 'sweetalert2';
+import './style.css';
 
 // Criamos as constantes da nossa imagem, do nome e do botão
 const img = document.querySelector('#image');
