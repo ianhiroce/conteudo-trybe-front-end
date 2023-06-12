@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './pages/home';
 import CoffeeList from './pages/coffee-list';
 import Coffee from './pages/coffee';
+import NavBar from './components/nav-bar';
 
 // import { BrowserRouter } from 'react-router-dom'
 
@@ -10,12 +11,15 @@ function App() {
 
   return (
     //     <BrowserRouter>
-    <Routes>
-      <Route path="/" element={ <Home /> } />
-      <Route path="/coffees-list" element={ <CoffeeList /> } />
-      <Route path="/coffees" element={ <Coffee /> } />
-      {/*     </BrowserRouter> */}
-    </Routes>
+    <>
+    <NavBar />
+      <Routes>
+        <Route path="/" element={ <Home /> } />
+        <Route path="/coffees-list" element={ <Coffee /> } />
+        <Route path="/coffees/:coffee" element={ <CoffeeList /> } />
+        {/*     </BrowserRouter> */}
+      </Routes>
+    </>
   )
 }
 
